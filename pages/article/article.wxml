@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="container article">
+  <view>
+    <van-row>
+      <van-col span="24">
+        <van-col wx:if="{{isLoading}}" span="24">
+          <van-skeleton title row="50" />
+        </van-col>
+        <van-col wx:else span="24">
+          <van-col span="24" custom-class="article-title">
+            {{article.articleTitle}}
+          </van-col>
+          <van-col span="24" custom-class="article-author">
+            <van-col span="3" custom-class="article-author-avtar">
+              <van-image
+                round
+                width="2rem"
+                height="2rem"
+                src="{{article.articleAuthorAvatarUrl}}"
+              />
+            </van-col>
+            <van-col span="20">
+              <van-col span="24">
+                {{article.articleAuthorName}}
+              </van-col>
+              <van-col span="24">
+                {{article.timeAgo}}
+              </van-col>
+            </van-col>
+          </van-col>
+          <van-col span="24">
+            <towxml nodes="{{articleContent}}" />
+          </van-col>
+        </van-col>
+      </van-col>
+    </van-row>
+  </view>
+</view>

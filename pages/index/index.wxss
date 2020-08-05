@@ -1,0 +1,67 @@
+/**index.wxss**/
+page {
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
+  padding-top: 2vh;
+  padding-bottom: 10vh;
+}
+
+.article-box {
+  margin-bottom: 0.6em;
+  padding: 0 0.6em;
+}
+
+.article {
+  padding: 0.9em;
+  background-color: #fff;
+  box-shadow: 0 0 1px 0 #999;
+  border-radius: 5px;
+}
+
+.article-title {
+  font-weight: bold;
+  position: relative;
+  line-height: 1.4em;
+  /* 3 times the line-height to show 3 lines */
+  overflow: hidden;
+}
+
+.article-info {
+  margin-top: 1em;
+  font-size: 0.9em;
+}
+
+.article-tag {
+  margin-right: 0.5em;
+}
+
+.article-summary-md {
+  position: relative;
+  line-height: 1.6em;
+  /* 3 times the line-height to show 3 lines */
+  height: 4.8em;
+  overflow: hidden;
+}
+
+.article-summary-md::after {
+  content: "...";
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 20px 1px 45px;
+  /*background:url(http://newimg88.b0.upaiyun.com/newimg88/2014/09/ellipsis_bg.png) repeat-y;*/
+}
+
+.article-author {
+  margin-top: 1em;
+  color: #a9a9a9;
+  font-size: 0.9em;
+}
+
+.text-right {
+  text-align: right;
+}

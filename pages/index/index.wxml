@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+    <van-row>
+      <van-col wx:if="{{articles.length == 0}}" span="24">
+        <van-skeleton title row="3" />
+        <van-skeleton title row="3" />
+        <van-skeleton title row="3" />
+        <van-skeleton title row="3" />
+        <van-skeleton title row="3" />
+      </van-col>
+      <van-col span="24" wx:for="{{ articles }}" wx:for-item="article" wx:key="{{ article.idArticle }}">
+        <van-col span="24" custom-class="article-box" data-id="{{article.idArticle}}" bindtap="articleDetial">
+          <van-col span="24" custom-class="article">
+            <van-col span="24" custom-class="article-title">
+              {{article.articleTitle}}
+            </van-col>
+            <van-col span="24" custom-class="article-info article-summary-md">
+              {{article.articlePreviewContent}}
+            </van-col>
+            <van-col span="24" custom-class="article-author">
+              <van-col span="12">{{article.articleAuthorName}}</van-col>
+              <van-col span="12" custom-class="text-right">{{article.timeAgo}}</van-col>
+            </van-col>
+          </van-col>
+        </van-col>
+      </van-col>
+    </van-row>
+  </view>
+</view>

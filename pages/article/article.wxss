@@ -1,0 +1,20 @@
+/* pages/article/article.wxss */
+.article {
+  background-color: #fff;
+  height: 100vh;
+  padding-top: 2em;
+}
+
+.article-author {
+  padding-top: 1em;
+  padding-left: 1.5em;
+}
+
+.article-author-avtar {
+  padding-top: 0.5em;
+}
+
+.article-title {
+  font-weight: bold;
+  text-align: center;
+}

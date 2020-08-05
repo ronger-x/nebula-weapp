@@ -1,0 +1,24 @@
+<!--pages/me/me.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <van-row span="24">
+        <van-col span="8">
+          <image class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"/>
+        </van-col>
+        <van-col span="16" class="userinfo-nickname">
+          <block wx:if="{{hasUserInfo}}"><text style="line-height: 64rpx;">{{userInfo.nickName}}</text></block>
+          <van-button wx:else open-type="getUserInfo" plain bindgetuserinfo="getUserInfo"
+          custom-style="border: 0;background-color:transparent;padding: 0;line-height: 64rpx;">
+          点击登录
+          </van-button>
+        </van-col>
+    </van-row>
+  </view>
+  <view class="user-panel">
+    <block wx:for="{{features}}" wx:for-index="index" wx:for-item="feature" wx:key="*this">
+      <van-cell-group custom-class="mb-10">
+        <van-cell title="{{feature.title}}" icon="{{feature.icon}}" is-link url="{{feature.url}}"/>
+      </van-cell-group>
+    </block>
+  </view>
+</view>

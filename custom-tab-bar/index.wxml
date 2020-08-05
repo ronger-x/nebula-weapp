@@ -1,0 +1,9 @@
+<!--components/custom-tab-bar/custom-tab-bar.wxml-->
+  <view class="footbar">
+    <van-tabbar active-color="#FF4444" active="{{ active }}" bind:change="switchTab">
+      <block wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}">
+    <van-tabbar-item name="{{index}}" icon="{{item.icon}}"  data-path="{{item.pagePath}}" data-index="{{index}}">
+      {{item.text}}</van-tabbar-item>
+    </block>
+    </van-tabbar>
+  </view>
