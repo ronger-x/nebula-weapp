@@ -1,4 +1,7 @@
 /* pages/article/article.wxss */
+text {
+  word-break: break-all;
+}
 .article {
   background-color: #fff;
   height: 100vh;

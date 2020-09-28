@@ -74,14 +74,14 @@ Page({
     let _ts = this;
     var domain = app.globalData.domain;
     wx.request({
-      url: domain + '/vertical-console/api/v1/console/article/' + id,
+      url: domain + '/vertical-console/api/v1/article/detail/' + id,
       success(res) {
         let data = res.data;
         if (data.success) {
           _ts.setData({
             'article': data.data.article,
           });
-          let result = app.towxml(data.data.article.articleContent, 'html')
+          let result = app.towxml(data.data.article.articleContent, 'markdown')
           
           _ts.setData({
             'articleContent': result,
