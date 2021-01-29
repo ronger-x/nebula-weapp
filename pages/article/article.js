@@ -74,7 +74,7 @@ Page({
     let _ts = this;
     var domain = app.globalData.domain;
     wx.request({
-      url: domain + '/vertical-console/api/v1/article/detail/' + id,
+      url: domain + '/forest/api/v1/article/detail/' + id,
       success(res) {
         let data = res.data;
         if (data.success) {

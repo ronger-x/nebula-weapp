@@ -53,7 +53,7 @@ Page({
     let articles = _ts.data.articles;
     var domain = app.globalData.domain;
     wx.request({
-      url: domain + '/vertical-console/api/v1/console/articles',
+      url: domain + '/forest/api/v1/console/articles',
       data: {
         page: page
       },
