@@ -9,7 +9,7 @@
         <van-skeleton title row="3" />
         <van-skeleton title row="3" />
       </van-col>
-      <van-col span="24" wx:for="{{ articles }}" wx:for-item="article" wx:key="{{ article.idArticle }}">
+      <van-col span="24" wx:for="{{ articles }}" wx:for-item="article" wx:key="{{article.idArticle}}">
         <van-col span="24" custom-class="article-box" data-id="{{article.idArticle}}" bindtap="articleDetial">
           <van-col span="24" custom-class="article">
             <van-col span="24" custom-class="article-title">
